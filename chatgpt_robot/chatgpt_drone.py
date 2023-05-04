@@ -16,8 +16,8 @@ from mic import *
 
 ####################################################
 parser = argparse.ArgumentParser()
-parser.add_argument("--prompt", type=str, default="prompts/airsim_basic.txt")
-parser.add_argument("--sysprompt", type=str, default="system_prompts/airsim_basic.txt")
+parser.add_argument("--prompt", type=str, default="prompts/drone_basic.txt")
+parser.add_argument("--sysprompt", type=str, default="system_prompts/drone_basic.txt")
 args = parser.parse_args()
 
 with open("config.json", "r") as f:
