@@ -12,8 +12,6 @@ import time
 #import whisper
 #####################################################
 from mic import *
-
-
 ####################################################
 parser = argparse.ArgumentParser()
 parser.add_argument("--prompt", type=str, default="prompts/drone_basic.txt")
@@ -107,19 +105,14 @@ ask(prompt)
 print("Welcome to the weird chatbot! I am ready to help you with your questions and commands.")
 
 #############################################################################################
-
+#If you don't want to use Mic as an input, erase this part(mic=VoiceRecognizer(),message=mic.main())
 mic=VoiceRecognizer()
-message=mic.main()
-           
+message=mic.main()           
 #############################################################################################
 while True:
         result_w=message
-        #result_w=input(">>>")
-     
-        
-        #server_socket.close()
+        #result_w=input(">>>") #This is for 
         question = result_w
-        #question = input("ask me something?> ")
 
         if question == "!quit" or question == "!exit":
             print("okok ending code\n")
