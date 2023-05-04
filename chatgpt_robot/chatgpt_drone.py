@@ -60,7 +60,7 @@ def ask(prompt):
         }
     )
     completion = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=chat_history,
         temperature=0
     )
@@ -93,11 +93,11 @@ def extract_python_code(content):
 
 
 print(f"Initializing...")
-#############rclpy.init()
+
 te = Tello()
 time.sleep(1)
-#mytello=MyTello()
-#mytello.mystart()
+mytello=MyTello()
+mytello.mystart()
 print(f"Done.")
 
 with open(args.prompt, "r") as f:
@@ -106,49 +106,15 @@ with open(args.prompt, "r") as f:
 ask(prompt)
 print("Welcome to the weird chatbot! I am ready to help you with your questions and commands.")
 
-'''
-#model_w=whisper.load_model("base")
-#result_w = model_w.transcribe("Whisper.m4a")
-server_ip = '0.0.0.0'  # Listen to all available interfaces
-server_port = 12345
-
-# Create a socket object
-server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# Bind the socket to the IP address and port
-server_socket.bind((server_ip, server_port))
-
-# Listen for incoming connections
-server_socket.listen(1)
-print(f"Server is listening on {server_ip}:{server_port}")
-
-# Accept a connection
-client_socket, client_address = server_socket.accept()
-print(f"Connection from {client_address}")
-message = client_socket.recv(1024).decode('utf-8')
-#print(f"Message received: {message}")
-result_w=message
-# Close the sockets
-client_socket.close()
-server_socket.close()
-
-recv=0
-'''
 #############################################################################################
 
-#mic=VoiceRecognizer()
-#message=mic.main()
+mic=VoiceRecognizer()
+message=mic.main()
            
 #############################################################################################
 while True:
-   #if recv==0:
-   
-        #client_socket, client_address = server_socket.accept()
-        #print(f"Connection from {client_address}")
-        #message = client_socket.recv(1024).decode('utf-8')
-        #client_socket.close()
-        #result_w=message
-        result_w=input(">>>")
+        result_w=message
+        #result_w=input(">>>")
      
         
         #server_socket.close()
