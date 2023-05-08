@@ -1,4 +1,4 @@
-# ROBOT_GPT
+# ROBOT_GPT (Needs to be a bit more elaborate;;sorry)
 
  ## Using chatgpt api + whisper api + UDP to control Tello drone
  
